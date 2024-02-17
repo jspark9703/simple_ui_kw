@@ -1,8 +1,28 @@
 # SIMPLE_UI_KW
 it is a package that we made for study
-## animation button 
-### Getting started
 
+### Getting started
+Use this package as a library
+Depend on it
+Run this command:
+
+With Flutter:
+
+    $ flutter pub add simple_ui_kw
+This will add a line like this to your package's pubspec.yaml (and run an implicit flutter pub get):
+
+    dependencies:
+        simple_ui_kw: ^1.0.0
+Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
+
+Import it
+Now in your Dart code, you can use:
+
+    import 'package:simple_ui_kw/button_animation.dart';
+    import 'package:simple_ui_kw/video_splash_page.dart';
+
+## animation button 
+### parameters
     class AnimationButton extends StatefulWidget {
     final IconData iconTarget;
     final Color? targetColor;
@@ -29,7 +49,7 @@ it is a package that we made for study
     });
   
 ## video splash page
-### Getting started
+### parameters
     class VideoSplashScreen extends StatefulWidget {
     final String videoPath;
     final String title;

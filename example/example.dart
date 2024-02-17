@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         body: VideoSplashScreen(title: "Example",videoPath: "assets/background.mp4",customButton: AnimationButton( iconTarget: Icons.ac_unit, // 원하는 아이콘을 설정하세요.
             targetColor: Colors.blueGrey,
-            icon: Icons.ac_unit,
+            animatedIcon: Icons.ac_unit,
             iconColor: Colors.lightBlue,
             onChanged: () {
 print("tap"); // 탭 이벤트 발생 시 원하는 동작을 설정하세요.

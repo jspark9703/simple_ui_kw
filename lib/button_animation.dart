@@ -6,7 +6,7 @@ class AnimationButton extends StatefulWidget {
   final Color? targetColor;
   final double? targetSize;
   final VoidCallback onChanged;
-  final IconData icon;
+  final IconData animatedIcon;
   final Color? iconColor;
   final double? size;
   final Duration? duration;
@@ -18,7 +18,7 @@ class AnimationButton extends StatefulWidget {
     this.targetColor = Colors.black,
     this.targetSize = 70,
     required this.onChanged,
-    this.icon = Icons.favorite,
+    this.animatedIcon = Icons.favorite,
     this.iconColor = const Color(0xFFF5F5F5),
     this.size = 70,
     this.duration = const Duration(milliseconds: 500),
@@ -99,7 +99,7 @@ class _AnimationButtonState extends State<AnimationButton>
   AnimatedOpacity buildAnimatedIcon() => AnimatedOpacity(
         duration: const Duration(milliseconds: 100),
         opacity: _isTapped ? 1 : 0,
-        child: Icon(widget.icon,
+        child: Icon(widget.animatedIcon,
             size: _iconSizeAnimation.value, color: widget.iconColor),
       );
 

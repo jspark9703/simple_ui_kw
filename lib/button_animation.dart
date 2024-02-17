@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-class ButtonAnimation extends StatefulWidget {
+class AnimationButton extends StatefulWidget {
   final IconData iconTarget;
   final Color? targetColor;
   final double? targetSize;
@@ -13,7 +13,7 @@ class ButtonAnimation extends StatefulWidget {
   final Curve curve;
   final double iconSize;
 
-  ButtonAnimation({
+  const AnimationButton({super.key, 
     required this.iconTarget,
     this.targetColor = Colors.black,
     this.targetSize = 70,
@@ -27,10 +27,10 @@ class ButtonAnimation extends StatefulWidget {
   });
 
   @override
-  _ButtonAnimationState createState() => _ButtonAnimationState();
+  _AnimationButtonState createState() => _AnimationButtonState();
 }
 
-class _ButtonAnimationState extends State<ButtonAnimation>
+class _AnimationButtonState extends State<AnimationButton>
     with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _iconSizeAnimation;
@@ -82,6 +82,7 @@ class _ButtonAnimationState extends State<ButtonAnimation>
     );
   }
 
+  // ignore: sized_box_for_whitespace
   Container buttonBody(BuildContext context) => Container(
         height: widget.size,
         width: widget.size,
